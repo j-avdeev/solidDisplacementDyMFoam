@@ -1,0 +1,5 @@
+SOURCE += derivedFvPatchFields/tractionDisplacement/tractionDisplacementFvPatchVectorField.C
+SOURCE += derivedFvPatchFields/hydrostaticDisplacement/hydrostaticDisplacementFvPatchVectorField.C
+SOURCE += solidDisplacementDyMFoam.C
+
+EXE = $(FOAM_USER_APPBIN)/solidDisplacementDyMFoam
