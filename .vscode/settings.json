@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "solidDisplacementDyMFoam.C": "cpp",
+        "solidDisplacementThermo.C": "cpp",
+        "calculateStress.H": "cpp",
+        "createFields.H": "cpp",
+        "kineticEnergyLimiter.H": "cpp",
+        "readSteadyStressFoamControls.H": "cpp",
+        "solidEquilibriumDisplacementFoam.C": "cpp"
+    }
+}

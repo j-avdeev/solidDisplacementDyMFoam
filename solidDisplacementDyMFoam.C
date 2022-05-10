@@ -36,9 +36,11 @@ Description
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
+#include "dynamicFvMesh.H" //
 #include "solidDisplacementThermo.H"
 #include "fvModels.H"
 #include "fvConstraints.H"
+//#include "CorrectPhi.H" //
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
@@ -48,8 +50,11 @@ int main(int argc, char *argv[])
 
     #include "setRootCaseLists.H"
     #include "createTime.H"
-    #include "createMesh.H"
+    #include "createDynamicFvMesh.H" //
+//    #include "createMesh.H"
     #include "createControls.H"
+//    #include "createDyMControls.H" //
+//    #include "initCorrectPhi.H" //
     #include "createFields.H"
     #include "createFieldRefs.H"
 
@@ -68,6 +73,19 @@ int main(int argc, char *argv[])
 
         do
         {
+            fvModels.preUpdateMesh(); //
+
+            mesh.update(); //
+
+            if (mesh.changing())
+            {
+                Info<< "mesh.update() mesh.update() mesh.update()"  << endl;
+//                if (correctPhi)
+//                {
+//                    #include "correctPhi.H"
+//                }
+            }
+
             fvModels.correct();
 
             if (thermo.thermalStress())

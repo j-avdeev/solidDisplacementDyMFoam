@@ -1,13 +1,14 @@
 $(OBJECTS_DIR)/solidDisplacementDyMFoam.C.dep: \
 solidDisplacementDyMFoam.C \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvCFD.H \
+$(WM_PROJECT_DIR)/src/dynamicFvMesh/lnInclude/dynamicFvMesh.H \
 solidDisplacementThermo/solidDisplacementThermo.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvModels.H \
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvConstraints.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/postProcess.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/setRootCaseLists.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H \
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H \
+$(WM_PROJECT_DIR)/src/dynamicFvMesh/lnInclude/createDynamicFvMesh.H \
 createControls.H \
 createFields.H \
 createFieldRefs.H \
@@ -788,13 +789,14 @@ $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Barycentric2D.H \
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Barycentric2DI.H \
 
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvCFD.H :
+$(WM_PROJECT_DIR)/src/dynamicFvMesh/lnInclude/dynamicFvMesh.H :
 solidDisplacementThermo/solidDisplacementThermo.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvModels.H :
 $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvConstraints.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/postProcess.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/setRootCaseLists.H :
 $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createTime.H :
-$(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/createMesh.H :
+$(WM_PROJECT_DIR)/src/dynamicFvMesh/lnInclude/createDynamicFvMesh.H :
 createControls.H :
 createFields.H :
 createFieldRefs.H :
